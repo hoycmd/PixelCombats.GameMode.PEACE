@@ -45,7 +45,6 @@
       {
         "Name": "FillQuad",
         "DisplayName": "<b><i>Заполнять <color=Red>квадрат</a></i></b>"
-        "Default": true
       },
       {
         "Name": "RemoveQuad",
