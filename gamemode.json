@@ -43,10 +43,12 @@
       {
         "Name": "FillQuad",
         "DisplayName": "<b><i>Заполнять <color=Red>квадрат</a></i></b>"
+        "Default": true
       },
       {
         "Name": "RemoveQuad",
         "DisplayName": "<b><i><color=Red>Удалить</a> квадрат</i></b>"
+        "Default": true
       },
       {
         "Name": "Fly",
