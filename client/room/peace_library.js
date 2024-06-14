@@ -13,22 +13,6 @@ function set_inventory() {
     context.ExplosiveInfinity.Value = true;
     context.Build.Value = true;
     context.BuildInfinity.Value = true;
-    context.Pipette.Value = true;
-    context.FlyEnable.Value = true;
-    context.BalkLenChange.Value = true;
-    context.BuildRangeEnable.Value = true;
-    context.BuildModeEnable.Value = true;
-    context.RemoveQuad.Value = true;
-    context.FillQuad.Value = true;
-    context.FloodFill.Value = true;
-    context.ChangeSpawnsEnable.Value = true;
-    context.LoadMapEnable.Value = true;
-    context.ChangeMapAuthorsEnable.Value = true;
-    context.GenMapEnable.Value = true;
-    context.ChangeCameraPointsEnable.Value = true;
-    context.CollapseChangeEnable.Value = true;
-    context.QuadChangeEnable.Value = true;
-    context.SetSkyEnable.Value = true;
 }
 
 function set_build_settings() {
@@ -46,6 +30,10 @@ function set_build_settings() {
     context.ChangeMapAuthorsEnable.Value = true;
     context.LoadMapEnable.Value = true;
     context.ChangeSpawnsEnable.Value = true;
+    context.FloodFill.Value = true;
+    context.FillQuad.Value = true;
+    context.RemoveQuad.Value = true;
+    context.BuildRangeEnable.Value = true;
     context.BlocksSet.Value = room.BuildBlocksSet.AllClear; // делаем возможность строительства всеми блоками
 }
 
