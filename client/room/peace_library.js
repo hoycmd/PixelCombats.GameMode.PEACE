@@ -43,15 +43,6 @@ function set_empty_inventory(inventory) {
     inventory.Build.Value = false;
 }
 
-// задает в контекст инвентаря пустой инвентарь
-function seet_empty_inventory(inventory) {
-    inventory.Main.Value = false;
-    inventory.Secondary.Value = false;
-    inventory.Melee.Value = false;
-    inventory.Explosive.Value = false;
-    inventory.Build.Value = false;
-}
-
 // задает опции режима мир, выбранные при создании комнаты
 export function apply_room_options() {
     const gameModeParameters = room.GameMode.Parameters;
@@ -87,12 +78,12 @@ export function create_teams() {
     const hasRedTeam = roomParameters.GetBool("RedTeam");
     const hasBlueTeam = roomParameters.GetBool("BlueTeam");
     if (hasRedTeam || !hasRedTeam && !hasBlueTeam) {
-        const redTeam = teams.create_team_red();
+    const redTeam = teams.create_team_red();
         if (roomParameters.GetBool("RedHasNothing")) {
-            seet_empty_inventory(redTeam.Inventory);
+            set_empty_inventory(redTeam.Inventory);
         }
     }
-        
+
     }
     if (hasBlueTeam || !hasRedTeam && !hasBlueTeam) {
         const blueTeam = teams.create_team_blue();
