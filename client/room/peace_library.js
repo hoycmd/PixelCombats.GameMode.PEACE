@@ -34,7 +34,7 @@ function set_build_settings() {
     context.CollapseChangeEnable.Value = true;
     context.QuadChangeEnable.Value = true;
     context.SetSkyEnable.Value = true;
-    context.BlocksSet.Value = room.BuildBlocksSet.AllClear; // делаем возможность строительства всеми блоками
+    context.BlocksSet.Value = BuildBlocksSet.AllClear;
 }
 
 // задает в контекст инвентаря пустой инвентарь
