@@ -40,7 +40,6 @@
       {
         "Name": "FloodFill",
         "DisplayName": "<b><i><color=Red>Заливка</a></i></b>"
-        "Default": true
       },
       {
         "Name": "FillQuad",
@@ -49,7 +48,6 @@
       {
         "Name": "RemoveQuad",
         "DisplayName": "<b><i><color=Red>Удалить</a> квадрат</i></b>"
-        "Default": true
       },
       {
         "Name": "Fly",
