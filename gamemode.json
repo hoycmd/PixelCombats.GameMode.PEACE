@@ -1,1 +1,59 @@
-
+{
+  "ApiVersion": 2,
+  "Name": "<b><i><color=Lime>МИР</a> (API 2.0)</i></b>",
+  "Description": "<b><i>Мирный режим,но с оружиями <color=Red>(и бесконечными патронами на оружия)</a> и с функциями: <a>РЕДАКТОРА!!!</a></i></b>",
+  "StartClientVersion": 532,
+  "MapLists": [
+    {
+      "MapListId": 324,
+      "Name": "Официальные карты"
+    }
+  ],
+  "Parameters": {
+    "Bool": [
+      {
+        "Name": "Damage",
+        "DisplayName": "<b><i><color=Red>Урон</a></i></b>"
+      },
+      {
+        "Name": "PartialDesruction",
+        "DisplayName": "<b><i>Частичное <color=Red>разрушение</a></i></b>"
+      },
+      {
+        "Name": "LoosenBlocks",
+        "DisplayName": "<b><i><color=Red>Слабые</a> блоки</i></b>"
+      },
+      {
+        "Name": "RedTeam",
+        "DisplayName": "<b><i>Команда <color=Red>Красная</a></i></b>",
+        "Default": true
+      },
+      {
+        "Name": "BlueTeam",
+        "DisplayName": "<b><i>Команда <color=Blue>Синия</a></i></b>",
+        "Default": true
+      },
+      {
+        "Name": "BlueHasNothing",
+        "DisplayName": "<b><i>Пустой инвентарь команды: <color=Blue>Синие</a></i></b>"
+      },
+      {
+        "Name": "FloodFill",
+        "DisplayName": "<b><i><color=Red>Заливка</a></i></b>"
+      },
+      {
+        "Name": "FillQuad",
+        "DisplayName": "<b><i>Заполнять <color=Red>квадрат</a></i></b>"
+      },
+      {
+        "Name": "RemoveQuad",
+        "DisplayName": "<b><i><color=Red>Удалить</a> квадрат</i></b>"
+      },
+      {
+        "Name": "Fly",
+        "DisplayName": "<b><i>Полёт</i></b>",
+        "Default": true
+      }
+    ]
+  }
+}
