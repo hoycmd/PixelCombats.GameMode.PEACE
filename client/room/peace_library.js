@@ -4,10 +4,13 @@ import * as teams from './default_teams.js';
 // разрешает все что можно для строительства
 function set_inventory() {
     const context = room.Inventory.GetContext();
-    context.Main.Value = false;
-    context.Secondary.Value = false;
+    context.Main.Value = true;
+    context.MainInfinity.Value = true;
+    context.Secondary.Value = true;
+    context.SecondaryInfinity.Value = true;
     context.Melee.Value = true;
-    context.Explosive.Value = false;
+    context.Explosive.Value = true;
+    context.ExplosiveInfinity.Value = true;
     context.Build.Value = true;
     context.BuildInfinity.Value = true;
 }
@@ -16,6 +19,9 @@ function set_build_settings() {
     const context = room.Build.GetContext();
     // прочие опции
     context.Pipette.Value = true;
+    context.FloodFill.Value = true;
+    context.FillQuad.Value = true;
+    context.RemoveQuad.Value = true;
     context.BalkLenChange.Value = true;
     context.SetSkyEnable.Value = true;
     context.GenMapEnable.Value = true;
@@ -27,11 +33,21 @@ function set_build_settings() {
     context.ChangeMapAuthorsEnable.Value = true;
     context.LoadMapEnable.Value = true;
     context.ChangeSpawnsEnable.Value = true;
+    context.BuildRangeEnable.Value = true; 
     context.BlocksSet.Value = room.BuildBlocksSet.AllClear; // делаем возможность строительства всеми блоками
 }
 
 // задает в контекст инвентаря пустой инвентарь
 function set_empty_inventory(inventory) {
+    inventory.Main.Value = false;
+    inventory.Secondary.Value = false;
+    inventory.Melee.Value = false;
+    inventory.Explosive.Value = false;
+    inventory.Build.Value = false;
+}
+
+// задает в контекст инвентаря пустой инвентарь
+function seet_empty_inventory(inventory) {
     inventory.Main.Value = false;
     inventory.Secondary.Value = false;
     inventory.Melee.Value = false;
@@ -54,7 +70,7 @@ export function apply_room_options() {
     room.Damage.GetContext().DamageOut.Value = gameModeParameters.GetBool("Damage");
     room.BreackGraph.OnlyPlayerBlocksDmg = gameModeParameters.GetBool("PartialDesruction");
     room.BreackGraph.WeakBlocks = gameModeParameters.GetBool("LoosenBlocks");
-}
+ }
 
 // задает настройки режима мир
 export function configure() {
