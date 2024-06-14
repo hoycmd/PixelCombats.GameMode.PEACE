@@ -19,21 +19,20 @@ function set_build_settings() {
     const context = room.Build.GetContext();
     // прочие опции
     context.Pipette.Value = true;
-    context.FloodFill.Value = true;
-    context.FillQuad.Value = true;
-    context.RemoveQuad.Value = true;
     context.BalkLenChange.Value = true;
-    context.SetSkyEnable.Value = true;
+    context.BuildRangeEnable.Value = true;
+    context.BuildModeEnable.Value = true;
+    context.RemoveQuad.Value = true;
+    context.FillQuad.Value = true;
+    context.FloodFill.Value = true;
+    context.ChangeSpawnsEnable.Value = true;
+    context.LoadMapEnable.Value = true;
+    context.ChangeMapAuthorsEnable.Value = true;
     context.GenMapEnable.Value = true;
     context.ChangeCameraPointsEnable.Value = true;
-    context.QuadChangeEnable.Value = true;
-    context.BuildModeEnable.Value = true;
     context.CollapseChangeEnable.Value = true;
-    context.RenameMapEnable.Value = true;
-    context.ChangeMapAuthorsEnable.Value = true;
-    context.LoadMapEnable.Value = true;
-    context.ChangeSpawnsEnable.Value = true;
-    context.BuildRangeEnable.Value = true;
+    context.QuadChangeEnable.Value = true;
+    context.SetSkyEnable.Value = true;
     context.BlocksSet.Value = room.BuildBlocksSet.AllClear; // делаем возможность строительства всеми блоками
 }
 
