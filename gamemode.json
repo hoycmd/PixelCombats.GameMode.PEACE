@@ -16,6 +16,10 @@
         "DisplayName": "<b><i><color=Red>Урон</a></i></b>"
       },
       {
+        "Name": "FriendlyFire",
+        "DisplayName": "<b><i><color=Red>Огонь</a> по <color=Red>своим</a></i></b>"
+      },
+      {
         "Name": "PartialDesruction",
         "DisplayName": "<b><i>Частичное <color=Red>разрушение</a></i></b>"
       },
