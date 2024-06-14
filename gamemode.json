@@ -38,6 +38,10 @@
         "DisplayName": "<b><i>Пустой инвентарь команды: <color=Blue>Синие</a></i></b>"
       },
       {
+        "Name": "RedHasNothing",
+        "DisplayName": "<b><i>Пустой инвентарь команды: <color=Red>Красные</a></i></b>"
+      },
+      {
         "Name": "FloodFill",
         "DisplayName": "<b><i><color=Red>Заливка</a></i></b>"
       },
