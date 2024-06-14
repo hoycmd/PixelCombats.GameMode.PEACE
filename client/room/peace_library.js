@@ -19,9 +19,6 @@ function set_build_settings() {
     const context = room.Build.GetContext();
     // прочие опции
     context.Pipette.Value = true;
-    context.FloodFill.Value = true;
-    context.FillQuad.Value = true;
-    context.RemoveQuad.Value = true;
     context.BalkLenChange.Value = true;
     context.SetSkyEnable.Value = true;
     context.GenMapEnable.Value = true;
@@ -33,21 +30,11 @@ function set_build_settings() {
     context.ChangeMapAuthorsEnable.Value = true;
     context.LoadMapEnable.Value = true;
     context.ChangeSpawnsEnable.Value = true;
-    context.BuildRangeEnable.Value = true; 
     context.BlocksSet.Value = room.BuildBlocksSet.AllClear; // делаем возможность строительства всеми блоками
 }
 
 // задает в контекст инвентаря пустой инвентарь
 function set_empty_inventory(inventory) {
-    inventory.Main.Value = false;
-    inventory.Secondary.Value = false;
-    inventory.Melee.Value = false;
-    inventory.Explosive.Value = false;
-    inventory.Build.Value = false;
-}
-
-// задает в контекст инвентаря пустой инвентарь
-function seet_empty_inventory(inventory) {
     inventory.Main.Value = false;
     inventory.Secondary.Value = false;
     inventory.Melee.Value = false;
@@ -70,7 +57,7 @@ export function apply_room_options() {
     room.Damage.GetContext().DamageOut.Value = gameModeParameters.GetBool("Damage");
     room.BreackGraph.OnlyPlayerBlocksDmg = gameModeParameters.GetBool("PartialDesruction");
     room.BreackGraph.WeakBlocks = gameModeParameters.GetBool("LoosenBlocks");
- }
+}
 
 // задает настройки режима мир
 export function configure() {
@@ -96,8 +83,6 @@ export function create_teams() {
         const blueTeam = teams.create_team_blue();
         if (roomParameters.GetBool("BlueHasNothing")) {
             set_empty_inventory(blueTeam.Inventory);
-        if (roomParameters.GetBool("RedHasNothing")) {
-            seet_empty_inventory("redTeam.Inventory);
         }
     }
 
