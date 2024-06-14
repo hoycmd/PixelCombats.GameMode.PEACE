@@ -9,12 +9,10 @@ function set_inventory() {
     context.Secondary.Value = true;
     context.SecondaryInfinity.Value = true;
     context.Melee.Value = true;
-    context.MeleeInfinity.Value = true;
     context.Explosive.Value = true;
     context.ExplosiveInfinity.Value = true;
     context.Build.Value = true;
     context.BuildInfinity.Value = true;
-    
 }
 
 function set_build_settings() {
