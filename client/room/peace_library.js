@@ -19,6 +19,7 @@ function set_build_settings() {
     const context = room.Build.GetContext();
     // прочие опции
     context.Pipette.Value = true;
+    context.FlyEnable.Value = true;
     context.BalkLenChange.Value = true;
     context.BuildRangeEnable.Value = true;
     context.BuildModeEnable.Value = true;
