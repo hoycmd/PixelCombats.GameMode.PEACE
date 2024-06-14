@@ -19,6 +19,9 @@ function set_build_settings() {
     const context = room.Build.GetContext();
     // прочие опции
     context.Pipette.Value = true;
+    context.FloodFill.Value = true;
+    context.FillQuad.Value = true;
+    context.RemoveQuad.Value = true;
     context.BalkLenChange.Value = true;
     context.SetSkyEnable.Value = true;
     context.GenMapEnable.Value = true;
@@ -30,9 +33,6 @@ function set_build_settings() {
     context.ChangeMapAuthorsEnable.Value = true;
     context.LoadMapEnable.Value = true;
     context.ChangeSpawnsEnable.Value = true;
-    context.FloodFill.Value = true;
-    context.FillQuad.Value = true;
-    context.RemoveQuad.Value = true;
     context.BuildRangeEnable.Value = true;
     context.BlocksSet.Value = room.BuildBlocksSet.AllClear; // делаем возможность строительства всеми блоками
 }
