@@ -26,12 +26,10 @@
       {
         "Name": "RedTeam",
         "DisplayName": "<b><i>Команда <color=Red>Красная</a></i></b>",
-        "Default": true
       },
       {
         "Name": "BlueTeam",
         "DisplayName": "<b><i>Команда <color=Blue>Синия</a></i></b>",
-        "Default": true
       },
       {
         "Name": "BlueHasNothing",
