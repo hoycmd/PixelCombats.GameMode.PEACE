@@ -14,6 +14,7 @@ function set_inventory() {
     context.ExplosiveInfinity.Value = true;
     context.Build.Value = true;
     context.BuildInfinity.Value = true;
+    
 }
 
 function set_build_settings() {
@@ -31,6 +32,10 @@ function set_build_settings() {
     context.ChangeMapAuthorsEnable.Value = true;
     context.LoadMapEnable.Value = true;
     context.ChangeSpawnsEnable.Value = true;
+    context.FloodFill.Value = true;
+    context.FillQuad.Value = true;
+    context.RemoveQuad.Value = true;
+    context.BuildRangeEnable.Value = true;
     context.BlocksSet.Value = room.BuildBlocksSet.AllClear; // делаем возможность строительства всеми блоками
 }
 
@@ -78,12 +83,7 @@ export function create_teams() {
     const hasRedTeam = roomParameters.GetBool("RedTeam");
     const hasBlueTeam = roomParameters.GetBool("BlueTeam");
     if (hasRedTeam || !hasRedTeam && !hasBlueTeam) {
-    const redTeam = teams.create_team_red();
-        if (roomParameters.GetBool("RedHasNothing")) {
-            set_empty_inventory(redTeam.Inventory);
-        }
-    }
-
+        teams.create_team_red();
     }
     if (hasBlueTeam || !hasRedTeam && !hasBlueTeam) {
         const blueTeam = teams.create_team_blue();
