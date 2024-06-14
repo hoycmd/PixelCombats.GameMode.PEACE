@@ -13,6 +13,7 @@ function set_inventory() {
     context.ExplosiveInfinity.Value = true;
     context.Build.Value = true;
     context.BuildInfinity.Value = true;
+    context.ContextedProperties.SkinType.Value = 2;
 }
 
 function set_build_settings() {
