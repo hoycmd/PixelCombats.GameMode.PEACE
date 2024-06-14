@@ -13,7 +13,6 @@ function set_inventory() {
     context.ExplosiveInfinity.Value = true;
     context.Build.Value = true;
     context.BuildInfinity.Value = true;
-    context.SkinType.Value = 2;
 }
 
 function set_build_settings() {
@@ -62,6 +61,7 @@ export function apply_room_options() {
     room.Damage.GetContext().DamageOut.Value = gameModeParameters.GetBool("Damage");
     room.BreackGraph.OnlyPlayerBlocksDmg = gameModeParameters.GetBool("PartialDesruction");
     room.BreackGraph.WeakBlocks = gameModeParameters.GetBool("LoosenBlocks");
+    room.Damage.GetContext().FriendlyFire.Value = gameModeParameters.GetBool("FriendlyFire");
 }
 
 // задает настройки режима мир
