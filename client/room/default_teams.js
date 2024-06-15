@@ -1,5 +1,5 @@
 import { Color } from 'pixel_combats/basic';
-import { Teams, Team } from 'pixel_combats/room';
+import { Teams } from 'pixel_combats/room';
 
 export const RED_TEAM_NAME = "Red";
 export const BLUE_TEAM_NAME = "Blue";
