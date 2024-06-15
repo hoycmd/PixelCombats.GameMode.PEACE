@@ -40,18 +40,6 @@
         "DisplayName": "<b><i>Пустой инвентарь команды: <color=Blue>Синие</a></i></b>"
       },
       {
-        "Name": "FloodFill",
-        "DisplayName": "<b><i><color=Red>Заливка</a></i></b>"
-      },
-      {
-        "Name": "FillQuad",
-        "DisplayName": "<b><i>Заполнять <color=Red>квадрат</a></i></b>"
-      },
-      {
-        "Name": "RemoveQuad",
-        "DisplayName": "<b><i><color=Red>Удалить</a> квадрат</i></b>"
-      },
-      {
         "Name": "Fly",
         "DisplayName": "<b><i>Полёт</i></b>",
         "Default": true
