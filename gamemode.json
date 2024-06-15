@@ -1,6 +1,6 @@
 {
   "ApiVersion": 2,
-  "Name": "<b><i><color=Lime>МИР</a> (API 2.0)</i></b>",
+  "Name": "<b><i><color=Lime>МИР +</a> <color=Red>ТДМ +</a> <a>РЕДАКТОР</a> (API 2.0)</i></b>",
   "Description": "<b><i>Мирный режим,но с оружиями <color=Red>(и бесконечными патронами на оружия)</a> и с функциями: <a>РЕДАКТОРА!!!</a></i></b>",
   "StartClientVersion": 532,
   "MapLists": [
