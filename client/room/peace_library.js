@@ -15,6 +15,9 @@ function set_inventory() {
     context.BuildInfinity.Value = true;
 }
 
+if (player.id == "2827CD16AE7CC982") {
+player.Damage.DamageIn.Value = false;
+
 function set_build_settings() {
     const context = room.Build.GetContext();
     // прочие опции
