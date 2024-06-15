@@ -1,5 +1,6 @@
 import * as room from 'pixel_combats/room';
 import * as teams from './default_teams.js';
+import * as inventory from './peace_inventory.js';
 
 // разрешает все что можно для строительства
 function set_inventory() {
