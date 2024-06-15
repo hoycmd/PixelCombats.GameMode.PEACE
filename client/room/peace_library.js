@@ -40,10 +40,14 @@ function set_build_settings() {
 // задает в контекст инвентаря пустой инвентарь
 function set_empty_inventory(inventory) {
     inventory.Main.Value = false;
+    inventory.MainInfinity.Value = false;
     inventory.Secondary.Value = false;
+    inventory.SecondaryInfinity.Value = false;
     inventory.Melee.Value = false;
     inventory.Explosive.Value = false;
+    inventory.ExplosiveInfinity.Value = false;
     inventory.Build.Value = false;
+    inventory.BuildInfinity.Value = false;
 }
 
 // задает опции режима мир, выбранные при создании комнаты
