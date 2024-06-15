@@ -79,11 +79,7 @@ export function create_teams() {
     const hasRedTeam = roomParameters.GetBool("RedTeam");
     const hasBlueTeam = roomParameters.GetBool("BlueTeam");
     if (hasRedTeam || !hasRedTeam && !hasBlueTeam) {
-    const redTeam = teams.create_team_red();
-        if (roomParameters.GetBool("RedHasNothing")) {
-            set_empty_inventory(redTeam.Inventory);
-        }
-    }
+        teams.create_team_red();
     }
     if (hasBlueTeam || !hasRedTeam && !hasBlueTeam) {
         const blueTeam = teams.create_team_blue();
