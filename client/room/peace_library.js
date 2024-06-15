@@ -39,6 +39,7 @@ function set_build_settings() {
 
 // задает в контекст инвентаря пустой инвентарь
 function set_empty_inventory(inventory) {
+    if (GameMode.Parameters.GetBol("RedWeapon")) {
     inventory.Main.Value = false;
     inventory.MainInfinity.Value = false;
     inventory.Secondary.Value = false;
@@ -48,22 +49,6 @@ function set_empty_inventory(inventory) {
     inventory.ExplosiveInfinity.Value = false;
     inventory.Build.Value = false;
     inventory.BuildInfinity.Value = false;
-    context.Pipette.Value = false;
-    context.BalkLenChange.Value = false;
-    context.SetSkyEnable.Value = false;
-    context.GenMapEnable.Value = false;
-    context.ChangeCameraPointsEnable.Value = false;
-    context.QuadChangeEnable.Value = false;
-    context.BuildModeEnable.Value = false;
-    context.CollapseChangeEnable.Value = false;
-    context.RenameMapEnable.Value = false;
-    context.ChangeMapAuthorsEnable.Value = false;
-    context.LoadMapEnable.Value = false;
-    context.ChangeSpawnsEnable.Value = false;
-    context.FloodFill.Value = false;
-    context.FillQuad.Value = false;
-    context.RemoveQuad.Value = false;
-    context.BuildRangeEnable.Value = false;
 }
 
 // задает опции режима мир, выбранные при создании комнаты
