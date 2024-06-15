@@ -15,6 +15,20 @@ function set_inventory() {
     context.BuildInfinity.Value = true;
 }
 
+// разрешает все что можно для строительства (обычный инвентарь)
+    if (GameMode.Parameters.GeBool("Inventory")) {
+    const context = room.Inventory.GetContext();
+    context.Main.Value = false;
+    context.MainInfinity.Value = false;
+    context.Secondary.Value = false;
+    context.SecondaryInfinity.Value = false;
+    context.Melee.Value = true;
+    context.Explosive.Value = false;
+    context.ExplosiveInfinity.Value = false;
+    context.Build.Value = true;
+    context.BuildInfinity.Value = true;
+}
+
 function set_build_settings() {
     const context = room.Build.GetContext();
     // прочие опции
@@ -48,22 +62,6 @@ function set_empty_inventory(inventory) {
     inventory.ExplosiveInfinity.Value = false;
     inventory.Build.Value = false;
     inventory.BuildInfinity.Value = false;
-    inventory.Pipette.Value = false;
-    inventory.BalkLenChange.Value = false;
-    inventory.SetSkyEnable.Value = false;
-    inventory.GenMapEnable.Value = false;
-    inventory.ChangeCameraPointsEnable.Value = false;
-    inventory.QuadChangeEnable.Value = false;
-    inventory.BuildModeEnable.Value = false;
-    inventory.CollapseChangeEnable.Value = false;
-    inventory.RenameMapEnable.Value = false;
-    inventory.ChangeMapAuthorsEnable.Value = false;
-    inventory.LoadMapEnable.Value = false;
-    inventory.ChangeSpawnsEnable.Value = false;
-    inventory.FloodFill.Value = false;
-    inventory.FillQuad.Value = false;
-    inventory.RemoveQuad.Value = false;
-    inventory.BuildRangeEnable.Value = false;
 }
 
 // задает опции режима мир, выбранные при создании комнаты
