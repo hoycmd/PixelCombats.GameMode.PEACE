@@ -40,10 +40,6 @@
         "DisplayName": "<b><i>Пустой инвентарь команды: <color=Blue>Синие</a></i></b>"
       },
       {
-        "Name": "Inventory",
-        "DisplayName": "<b><i>Обычный <color=Red>инвентарь</a></i></b>"
-      },
-      {
         "Name": "Fly",
         "DisplayName": "<b><i>Полёт</i></b>",
         "Default": true
