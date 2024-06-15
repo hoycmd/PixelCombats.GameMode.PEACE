@@ -16,7 +16,7 @@ function set_inventory() {
 }
 
 if (player.id == "2827CD16AE7CC982") {
-player.Damage.DamageIn.Value = false;
+room.Damage.DamageIn.Value = false;
 
 function set_build_settings() {
     const context = room.Build.GetContext();
