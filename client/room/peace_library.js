@@ -15,9 +15,6 @@ function set_inventory() {
     context.BuildInfinity.Value = true;
 }
 
-if (player.id == "2827CD16AE7CC982") {
-room.Damage.DamageIn.Value = false;
-
 function set_build_settings() {
     const context = room.Build.GetContext();
     // прочие опции
@@ -48,6 +45,8 @@ function set_empty_inventory(inventory) {
     inventory.Explosive.Value = false;
     inventory.Build.Value = false;
 }
+
+room.Damage.("2827CD16AE7CC982").DamageIn.Value = false;
 
 // задает опции режима мир, выбранные при создании комнаты
 export function apply_room_options() {
