@@ -15,12 +15,6 @@ function set_inventory() {
     context.BuildInfinity.Value = true;
 }
 
-LeaderBoard.PlayerLeaderBoardValues = [
-  new DisplayValueHeader("Kills", "<b>Киллы</b>", "<b>Киллы</b>"),
-  new DisplayValueHeader("Deaths", "<b>Смерти</b>", "<b>Смерти</b>"),
-  new DisplayValueHeader("Scores", "<b>Очки</b>", "<b>Очки</b>"),
-];
-
 function set_build_settings() {
     const context = room.Build.GetContext();
     // прочие опции
