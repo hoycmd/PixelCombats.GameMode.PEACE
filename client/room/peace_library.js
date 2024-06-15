@@ -15,20 +15,6 @@ function set_inventory() {
     context.BuildInfinity.Value = true;
 }
 
-// разрешает все что можно для строительства (обычный инвентарь)
-    if (GameMode.Parameters.GeBool("Inventory")) {
-    const context = room.Inventory.GetContext();
-    context.Main.Value = false;
-    context.MainInfinity.Value = false;
-    context.Secondary.Value = false;
-    context.SecondaryInfinity.Value = false;
-    context.Melee.Value = true;
-    context.Explosive.Value = false;
-    context.ExplosiveInfinity.Value = false;
-    context.Build.Value = true;
-    context.BuildInfinity.Value = true;
-}
-
 function set_build_settings() {
     const context = room.Build.GetContext();
     // прочие опции
