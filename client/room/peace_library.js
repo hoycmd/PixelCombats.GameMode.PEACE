@@ -52,9 +52,6 @@ export function apply_room_options() {
 
     // опции строительства
     const buildContext = room.Build.GetContext();
-    buildContext.FloodFill.Value = gameModeParameters.GetBool("FloodFill");
-    buildContext.FillQuad.Value = gameModeParameters.GetBool("FillQuad");
-    buildContext.RemoveQuad.Value = gameModeParameters.GetBool("RemoveQuad");
     buildContext.FlyEnable.Value = gameModeParameters.GetBool("Fly");
 
     // прочие опции
