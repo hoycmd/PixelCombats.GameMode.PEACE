@@ -48,23 +48,22 @@ function set_empty_inventory(inventory) {
     inventory.ExplosiveInfinity.Value = false;
     inventory.Build.Value = false;
     inventory.BuildInfinity.Value = false;
-    } else {
-    context.Pipette.Value = false;
-    context.BalkLenChange.Value = false;
-    context.SetSkyEnable.Value = false;
-    context.GenMapEnable.Value = false;
-    context.ChangeCameraPointsEnable.Value = false;
-    context.QuadChangeEnable.Value = false;
-    context.BuildModeEnable.Value = false;
-    context.CollapseChangeEnable.Value = false;
-    context.RenameMapEnable.Value = false;
-    context.ChangeMapAuthorsEnable.Value = false;
-    context.LoadMapEnable.Value = false;
-    context.ChangeSpawnsEnable.Value = false;
-    context.FloodFill.Value = false;
-    context.FillQuad.Value = false;
-    context.RemoveQuad.Value = false;
-    context.BuildRangeEnable.Value = false;
+    inventory.Pipette.Value = false;
+    inventory.BalkLenChange.Value = false;
+    inventory.SetSkyEnable.Value = false;
+    inventory.GenMapEnable.Value = false;
+    inventory.ChangeCameraPointsEnable.Value = false;
+    inventory.QuadChangeEnable.Value = false;
+    inventory.BuildModeEnable.Value = false;
+    inventory.CollapseChangeEnable.Value = false;
+    inventory.RenameMapEnable.Value = false;
+    inventory.ChangeMapAuthorsEnable.Value = false;
+    inventory.LoadMapEnable.Value = false;
+    inventory.ChangeSpawnsEnable.Value = false;
+    inventory.FloodFill.Value = false;
+    inventory.FillQuad.Value = false;
+    inventory.RemoveQuad.Value = false;
+    inventory.BuildRangeEnable.Value = false;
 }
 
 // задает опции режима мир, выбранные при создании комнаты
