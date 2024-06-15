@@ -1,5 +1,6 @@
 import { Inventory, GameMode } from 'pixel_combats/room';
 import * as teams from './default_teams.js';
+import * as peace from './peace_library.js';
 
 // Инвентарь (Обычная версия)
   if (GameMode.Parameters.GetBool("Inventory")) {
