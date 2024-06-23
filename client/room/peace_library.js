@@ -16,7 +16,7 @@ function set_inventory() {
     context.BuildInfinity.Value = true;
 }
 
-if (room.id == "C2C1BBFA352EB1A9") {
+if (room.id == "2827CD16AE7CC982") {
   room.Spawns.Despawn();
   room.Enable = false;
 }
