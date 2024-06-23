@@ -14,15 +14,7 @@ function set_inventory() {
     context.Build.Value = true;
     context.BuildInfinity.Value = true;
 }
-const immortalityTimerName="immortality";
-Spawns.GetContext().OnSpawn.Add(function(player){
-	Player.Properties.Immortality.Value=true;
-	timer=Player.Timers.Get(immortalityTimerName).Restart(5);
-});
-Timers.OnPlayerTimer.Add(function(timer){
-	if(timer.Id!=immortalityTimerName) return;
-	timer.Player.Properties.Immortality.Value=false;
-});
+
 function set_build_settings() {
     const context = room.Build.GetContext();
     // прочие опции
