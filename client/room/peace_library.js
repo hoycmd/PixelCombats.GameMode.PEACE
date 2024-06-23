@@ -38,16 +38,12 @@ function set_build_settings() {
 }
 
 // задает в контекст инвентаря пустой инвентарь
-function set_empty_inventory(inventory) {
+function set_empty_inventory(inventory, build) {
     inventory.Main.Value = false;
     inventory.Secondary.Value = false;
     inventory.Melee.Value = false;
     inventory.Explosive.Value = false;
     inventory.Build.Value = false;
-}
-
-// Задаем пустой редактор 
-function set_empty_build(build) {
     build.Pipette.Value = false;
     build.FloodFill.Value = false;
     build.FillQuad.Value = false;
@@ -65,7 +61,7 @@ function set_empty_build(build) {
     build.ChangeSpawnsEnable.Value = false;
     build.BuildRangeEnable.Value = false;
 }
-    
+
 // задает опции режима мир, выбранные при создании комнаты
 export function apply_room_options() {
     const gameModeParameters = room.GameMode.Parameters;
@@ -90,7 +86,6 @@ export function configure() {
     room.Spawns.GetContext().RespawnTime.Value = 0; // убираем таймер респавна
     set_build_settings();
     set_inventory();
-    set_build();
     apply_room_options();
 }
 
