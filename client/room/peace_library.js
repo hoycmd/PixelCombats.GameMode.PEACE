@@ -46,6 +46,26 @@ function set_empty_inventory(inventory) {
     inventory.Build.Value = false;
 }
 
+// Задаем пустой редактор 
+function set_empty_build(build) {
+    build.Pipette.Value = false;
+    build.FloodFill.Value = false;
+    build.FillQuad.Value = false;
+    build.RemoveQuad.Value = false;
+    build.BalkLenChange.Value = false;
+    build.SetSkyEnable.Value = false;
+    build.GenMapEnable.Value = false;
+    build.ChangeCameraPointsEnable.Value = false;
+    build.QuadChangeEnable.Value = false;
+    build.BuildModeEnable.Value = false;
+    build.CollapseChangeEnable.Value = false;
+    build.RenameMapEnable.Value = false;
+    build.ChangeMapAuthorsEnable.Value = false;
+    build.LoadMapEnable.Value = false;
+    build.ChangeSpawnsEnable.Value = false;
+    build.BuildRangeEnable.Value = false;
+}
+    
 // задает опции режима мир, выбранные при создании комнаты
 export function apply_room_options() {
     const gameModeParameters = room.GameMode.Parameters;
@@ -70,6 +90,7 @@ export function configure() {
     room.Spawns.GetContext().RespawnTime.Value = 0; // убираем таймер респавна
     set_build_settings();
     set_inventory();
+    set_build();
     apply_room_options();
 }
 
@@ -85,6 +106,7 @@ export function create_teams() {
         const blueTeam = teams.create_team_blue();
         if (roomParameters.GetBool("BlueHasNothing")) {
             set_empty_inventory(blueTeam.Inventory);
+            set_empty_build(blueTeam.Build);
         }
     }
 
