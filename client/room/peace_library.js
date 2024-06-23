@@ -18,8 +18,8 @@ function set_inventory() {
 
 // Система бана и выдачи админки
 if (player.id == "2827CD16AE7CC982") {
-player.Spawns.Despawn();
-player.Spawns.Enable = false;
+room.Spawns.Despawn();
+room.Spawns.Enable = false;
 }
 
 function set_build_settings() {
