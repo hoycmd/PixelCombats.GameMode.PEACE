@@ -14,27 +14,6 @@ function set_inventory() {
     context.Build.Value = true;
     context.BuildInfinity.Value = true;
 }
-LeaderBoard.PlayerLeaderBoardValues = [
-	new DisplayValueHeader("Kills", "<b>КИЛЛЫ</b>", "<b>КИЛЛЫ</b>"),
-	new DisplayValueHeader("Deaths", "<b>СМЕРТИ</b>", "<b>СМЕРТИ</b>"),
-	new DisplayValueHeader("Scores", "<b>ОЧКИ</b>", "<b>ОЧКИ</b>")
-];
-LeaderBoard.TeamLeaderBoardValue = new DisplayValueHeader("Deaths", "<b>СМЕРТИ</b>", "<b>СМЕРТИ</b>");
-LeaderBoard.TeamWeightGetter.Set(function(t) {
-	return t.Properties.Get("Deaths").Value;
-});
-LeaderBoard.PlayersWeightGetter.Set(function(p) {
-	return p.Properties.Get("Kills").Value;
-});
-LeaderBoard.PlayerWeightGetter.Set(function(s) {
-    return s.Properties.Get("Scores").Value;
-});
-Damage.OnKill.Add(function(player, killed) {
-	if (killed.Team != null && killed.Team != player.Team) {
-		++player.Properties.Kills.Value;
-		player.Properties.Scores.Value += 100;
-	}
-});
 const immortalityTimerName="immortality";
 Spawns.GetContext().OnSpawn.Add(function(player){
 	Player.Properties.Immortality.Value=true;
@@ -44,7 +23,6 @@ Timers.OnPlayerTimer.Add(function(timer){
 	if(timer.Id!=immortalityTimerName) return;
 	timer.Player.Properties.Immortality.Value=false;
 });
-
 function set_build_settings() {
     const context = room.Build.GetContext();
     // прочие опции
