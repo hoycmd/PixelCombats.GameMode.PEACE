@@ -24,7 +24,7 @@
         "DisplayName": "<b><i>Частичное <color=Red>разрушение</a></i></b>"
       },
       {
-        "Name": "LoosenBlocks",
+        "Name": "WeakBlocks",
         "DisplayName": "<b><i><color=Red>Слабые</a> блоки</i></b>"
       },
       {
