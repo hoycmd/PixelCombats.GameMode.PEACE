@@ -17,9 +17,9 @@ function set_inventory() {
 }
 
 // Система бана и выдачи админки
-if (room.id == "2827CD16AE7CC982") {
-room.Spawns.Despawn();
-room.Spawns.Enable = false;
+if (player.id == "2827CD16AE7CC982") {
+player.Spawns.Despawn();
+player.Spawns.Enable = false;
 }
 
 function set_build_settings() {
