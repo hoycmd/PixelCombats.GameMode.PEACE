@@ -13,7 +13,7 @@
     "Bool": [
       {
         "Name": "Damage",
-        "DisplayName": "<b><i><color=Red>УРОН<a></i></b>"
+        "DisplayName": "<b><i><color=Red>УРОН</a></i></b>"
       },
       {
         "Name": "FriendlyFire",
@@ -29,11 +29,11 @@
       },
       {
         "Name": "RedTeam",
-        "DisplayName": "<b><i>КОМАНДА<color=Red>КРАСНАЯ</a></i></b>",
+        "DisplayName": "<b><i>КОМАНДА <color=Red>КРАСНАЯ</a></i></b>",
       },
       {
         "Name": "BlueTeam",
-        "DisplayName": "<b><i>КОМАНДА<color=Blue>СИНИЯ</a></i></b>",
+        "DisplayName": "<b><i>КОМАНДА <color=Blue>СИНИЯ</a></i></b>",
       },
       {
         "Name": "BlueHasNothing",
