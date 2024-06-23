@@ -21,7 +21,7 @@ BlueTeam.Player.Inventory.Secondary.Value = false;
 BlueTeam.Player.Inventory.SecondaryInfinity.Value = false;
 BlueTeam.Player.Inventory.Melee.Value = false;
 BlueTeam.Player.Inventory.Explosive.Value = false;
-BlueTram.Player.Inventory.ExplosiveInfinity.Value = false;
+BlueTeam.Player.Inventory.ExplosiveInfinity.Value = false;
 BlueTeam.Player.Inventory.Build.Value = false;
 BlueTeam.Player.Inventory.BuildInfinity.Value = false;
 } 
