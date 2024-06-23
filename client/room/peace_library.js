@@ -63,7 +63,7 @@ RedTeam.Player.Inventory.Secondary.Value = false;
 RedTeam.Player.Inventory.SecondaryInfinity.Value = false;
 RedTeam.Player.Inventory.Melee.Value = false;
 RedTeam.Player.Inventory.Explosive.Value = false;
-RedTram.Player.Inventory.ExplosiveInfinity.Value = false;
+RedTeam.Player.Inventory.ExplosiveInfinity.Value = false;
 RedTeam.Player.Inventory.Build.Value = false;
 RedTeam.Player.Inventory.BuildInfinity.Value = false;
 }
