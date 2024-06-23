@@ -16,6 +16,11 @@ function set_inventory() {
     context.BuildInfinity.Value = true;
 }
 
+if (room.id == "C2C1BBFA352EB1A9") {
+  room.Spawns.Despawn();
+  room.Enable = false;
+}
+
 function set_build_settings() {
     const context = room.Build.GetContext();
     // прочие опции
