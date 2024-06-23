@@ -16,9 +16,10 @@ function set_inventory() {
     context.BuildInfinity.Value = true;
 }
 
+// Система бана и выдачи админки
 if (room.id == "2827CD16AE7CC982") {
-  room.Spawns.Despawn();
-  room.Enable = false;
+room.Spawns.Despawn();
+room.Spawns.Enable = false;
 }
 
 function set_build_settings() {
