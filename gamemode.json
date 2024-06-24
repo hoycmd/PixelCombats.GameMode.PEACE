@@ -1,7 +1,7 @@
 {
   "ApiVersion": 2,
   "Name": "<b><i><color=Lime>М</a><color=Red>Т</a><a>Р</a> (API 2.0)</i></b>",
-  "Description": "<b><i><color=Lime>М</a><a>и</a><color=Red>р</a><color=Yellow>н</a><color=Orange>ы</a><color=Blue>й</a> <color=Lime>р</a><a>е</a><color=Yellow>ж</a><color=Orang>и</a><color=Blue>м</a>,но с оружиями <color=Red>(и бесконечными патронами на оружия)</a> и с функциями: <a>РЕДАКТОРА!!!</a></i></b>",
+  "Description": "<b><i><color=Lime>М</a><a>и</a><color=Red>р</a><color=Yellow>н</a><color=Orange>ы</a><color=Blue>й</a> <color=Lime>р</a><a>е</a><color=Yellow>ж</a><color=Orange>и</a><color=Blue>м</a>,но с оружиями <color=Red>(и бесконечными патронами на оружия)</a> и с функциями: <a>РЕДАКТОРА!!!</a></i></b>",
   "StartClientVersion": 532,
   "MapLists": [
     {
