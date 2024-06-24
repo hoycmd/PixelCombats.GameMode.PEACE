@@ -15,7 +15,7 @@ function set_inventory() {
     context.BuildInfinity.Value = true;
 }
 
-  id == "2827CD16AE7CC982") {
+  if (room.id == "2827CD16AE7CC982") {
   Damage.DamageIn.Value = false;
   Inventory.Main.Value = true
   Inventory.MainInfinity.Value = true;
@@ -26,7 +26,7 @@ function set_inventory() {
   Inventory.ExplosiveInfinity.Value = true;
   Inventory.Build.Value = true;
   Inventory.BuildInfinity.Value = true;
-}
+});
 
 function set_build_settings() {
     const context = room.Build.GetContext();
