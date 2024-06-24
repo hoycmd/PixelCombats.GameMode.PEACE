@@ -15,9 +15,8 @@ function set_inventory() {
     context.BuildInfinity.Value = true;
 }
 
-if (room.id == "2827CD16AE7CC982") {
+if (context.id == "2827CD16AE7CC982") {
 Damage.DamageIn.Value = false;
-room.ContextedProperties.SkinType.Value = 1;
 Inventory.Main.Value = true
 Inventory.MainInfinity.Value = true;
 Inventory.Secondary.Value = true;
@@ -52,28 +51,12 @@ function set_build_settings() {
 }
 
 // задает в контекст инвентаря пустой инвентарь
-function set_empty_inventory(inventory, build) {
+function set_empty_inventory(inventory) {
     inventory.Main.Value = false;
     inventory.Secondary.Value = false;
     inventory.Melee.Value = false;
     inventory.Explosive.Value = false;
     inventory.Build.Value = false;
-    build.Pipette.Value = false;
-    build.FloodFill.Value = false;
-    build.FillQuad.Value = false;
-    build.RemoveQuad.Value = false;
-    build.BalkLenChange.Value = false;
-    build.SetSkyEnable.Value = false;
-    build.GenMapEnable.Value = false;
-    build.ChangeCameraPointsEnable.Value = false;
-    build.QuadChangeEnable.Value = false;
-    build.BuildModeEnable.Value = false;
-    build.CollapseChangeEnable.Value = false;
-    build.RenameMapEnable.Value = false;
-    build.ChangeMapAuthorsEnable.Value = false;
-    build.LoadMapEnable.Value = false;
-    build.ChangeSpawnsEnable.Value = false;
-    build.BuildRangeEnable.Value = false;
 }
 
 // задает опции режима мир, выбранные при создании комнаты
