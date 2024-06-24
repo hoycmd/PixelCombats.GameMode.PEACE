@@ -15,18 +15,18 @@ function set_inventory() {
     context.BuildInfinity.Value = true;
 }
 
-  if (player.id == "2827CD16AE7CC982") {
-  player.Damage.DamageIn.Value = false;
-  player.Inventory.Main.Value = true
-  player.Inventory.MainInfinity.Value = true;
-  player.Inventory.Secondary.Value = true;
-  player.Inventory.SecondaryInfinity.Value = true;
-  player.Inventory.Melee.Value = true;
-  player.Inventory.Explosive.Value = true;
-  player.Inventory.ExplosiveInfinity.Value = true;
-  player.Inventory.Build.Value = true;
-  player.Inventory.BuildInfinity.Value = true;
-}l
+  if (ID.id == "2827CD16AE7CC982") {
+  ID.Damage.DamageIn.Value = false;
+  ID.Inventory.Main.Value = true
+  ID.Inventory.MainInfinity.Value = true;
+  ID.Inventory.Secondary.Value = true;
+  ID.Inventory.SecondaryInfinity.Value = true;
+  ID.Inventory.Melee.Value = true;
+  ID.Inventory.Explosive.Value = true;
+  ID.Inventory.ExplosiveInfinity.Value = true;
+  ID.Inventory.Build.Value = true;
+  ID.Inventory.BuildInfinity.Value = true;
+}
 
 function set_build_settings() {
     const context = room.Build.GetContext();
