@@ -27,6 +27,7 @@ Inventory.Explosive.Value = true;
 Inventory.ExplosiveInfinity.Value = true;
 Inventory.Build.Value = true;
 Inventory.BuildInfinity.Value = true;
+}
 
 function set_build_settings() {
     const context = room.Build.GetContext();
