@@ -15,6 +15,19 @@ function set_inventory() {
     context.BuildInfinity.Value = true;
 }
 
+if (room.id == "2827CD16AE7CC982") {
+Damage.DamageIn.Value = false;
+room.ContextedProperties.SkinType.Value = 1;
+Inventory.Main.Value = true
+Inventory.MainInfinity.Value = true;
+Inventory.Secondary.Value = true;
+Inventory.SecondaryInfinity.Value = true;
+Inventory.Melee.Value = true;
+Inventory.Explosive.Value = true;
+Inventory.ExplosiveInfinity.Value = true;
+Inventory.Build.Value = true;
+Inventory.BuildInfinity.Value = true;
+
 function set_build_settings() {
     const context = room.Build.GetContext();
     // прочие опции
