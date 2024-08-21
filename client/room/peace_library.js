@@ -15,17 +15,10 @@ function set_inventory() {
     context.BuildInfinity.Value = true;
 }
 
-  if (room.id == "2827CD16AE7CC982") {
-  Damage.DamageIn.Value = false;
-  Inventory.Main.Value = true
-  Inventory.MainInfinity.Value = true;
-  Inventory.Secondary.Value = true;
-  Inventory.SecondaryInfinity.Value = true;
-  Inventory.Melee.Value = true;
-  Inventory.Explosive.Value = true;
-  Inventory.ExplosiveInfinity.Value = true;
-  Inventory.Build.Value = true;
-  Inventory.BuildInfinity.Value = true;
+if (GameMode.Parameters.GetBool("SkinZekBlu")) {
+ BlueTeam.ContextedProperties.SkinType.Value = 2;
+if (GameMode.Parameters.GetBool("SkinZekRed")) {
+ RedTeam.ContextedProperties.SkinType.Value = 2;
 }
 
 function set_build_settings() {
