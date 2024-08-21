@@ -88,7 +88,7 @@ export function create_teams() {
         teams.create_team_red();
     }
     if (hasBlueTeam || !hasRedTeam && !hasBlueTeam) {
-        const blueTeam = teams.create_team_blue();
+        const BlueTeam = teams.create_team_blue();
         if (roomParameters.GetBool("BlueHasNothing")) {
             set_empty_inventory(blueTeam.Inventort);
         }
