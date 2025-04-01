@@ -4,8 +4,8 @@ import * as TeamMTR from './Teams_TeamMTR.js;';
 import * as EditInvMTR from './Inventory_EditInvMTR.js';
 
 try {
-	
-const ImmortalityTimerName = 'Immortality';
+
+const ImmortalityTimerName = 'Immortality';	
 const MessageBlue = '<b><size=62><color=Green>M</a><color=Red>ᴛ</a><a>ʀ</a></size></b>';
 const MessageRed = '<b><size=82><color=Green>ᴮʸ:</a> <color=Red>ƬNƬ</a><color=Yellow>!</a></size></b>';
 
@@ -14,8 +14,8 @@ const BlueTeam = TeamMTR.CreateBlueTeam();
 BlueTeam.Build.BlocksSet.Value = Room.BuildBlocksSet.All;
 RedTeam.Build.BlocksSet.Value = Room.BuildBlocksSet.All;
 
-.EditSettings();
-.InventoryAll();
+EditInvMTR.EditSettings();
+EditInvMTR.InventoryAll();
 	
 Room.BreackGraph.WeakBlocks = Room.GameMode.Parameters.GetBool('LoosenBlocks');
 Room.BreackGraph.OnlyPlayerBlocksDmg = Room.GameMode.Parameters.GetBool('PartialDesruction');
@@ -37,10 +37,10 @@ Room.Ui.GetContext(RedTeam).TeamProp2.Value = { Team: 'Red', Prop: 'MessageRed' 
 
 Spawns.GetContext().OnSpawn.Add(function(Player) {
  Player.Properties.Immortality.Value = true;
-	Timer = Player.Timers.Get(Immortality).Restart(10);
+	Timer = Player.Timers.Get(ImmortalityTimerName).Restart(10);
 });
 Timers.OnPlayerTimer.Add(function(Timer) {
-	if (Timer.Id != Immortality) return;
+	if (Timer.Id != ImmortalityTimerName) return;
 	  Timer.Player.Properties.Immortality.Value = false;
 });
 
