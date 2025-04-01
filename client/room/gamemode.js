@@ -2,6 +2,8 @@ import * as Room from 'pixel_combats/room';
 import * as Basic from 'pixel_combats/basic';
 import * as MTR from './Settings_MTR.js;';
 
+try {
+	
 const ImmortalityTimerName = 'Immortality';
 const MessageBlue = '<b><size=62><color=Green>M</a><color=Red>ᴛ</a><a>ʀ</a></size></b>';
 const MessageRed = '<b><size=82><color=Green>ᴮʸ:</a> <color=Red>ƬNƬ</a><color=Yellow>!</a></size></b>';
@@ -59,4 +61,10 @@ if (Room.GameMode.Parameters.GetBool('RedHasNothing')) {
  Room.Teams.Get('RedTeam').Inventory.Build.Value = false;
      }
   }
+
+} catch (e) {
+        Room.Players.All.forEach(Room => {
+                Room.msg.Show(`${e.name}: ${e.message} ${e.stack}`);
+        });
+			   }	
 
