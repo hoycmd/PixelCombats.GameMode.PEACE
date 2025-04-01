@@ -13,35 +13,39 @@
     "Bool": [
       {
         "Name": "Damage",
-        "DisplayName": "<b><i><color=Red>УРОН</a></i></b>"
+        "DisplayName": "Урон"
       },
       {
         "Name": "FriendlyFire",
-        "DisplayName": "<b><i>УРОН ПО <color=Red>СВОИМ</a></i></b>"
+        "DisplayName": "Урон по своим"
       },
       {
         "Name": "PartialDesruction",
-        "DisplayName": "<b><i>ЧАСТИЧНОЕ <color=Red>РАЗРУШЕНИЕ</a></i></b>"
+        "DisplayName": "Частичное разрушение"
       },
       {
         "Name": "WeakBlocks",
-        "DisplayName": "<b><i>СЛАБЫЕ БЛОКИ</i></b>"
+        "DisplayName": "Слабые блоки"
       },
       {
         "Name": "RedTeam",
-        "DisplayName": "<b><i>КОМАНДА <color=Red>КРАСНАЯ</a></i></b>",
+        "DisplayName": "Команда: Красная",
       },
       {
         "Name": "BlueTeam",
-        "DisplayName": "<b><i>КОМАНДА <color=Blue>СИНИЯ</a></i></b>",
+        "DisplayName": "Команда: Синия",
       },
       {
         "Name": "BlueHasNothing",
-        "DisplayName": "<b><i><color=Red>ПУСТОЙ</a> ИНВЕНТАРЬ КОМАНДЫ:<color=Blue>СИНИХ</a></i></b>"
+        "DisplayName": "Пустой инвентарь, команды: Синие"
+      },
+      {
+        "Name": "RedHasNothing",
+        "DisplayName": "Пастой инвентарь, команды: Красные"
       },
       {
         "Name": "Fly",
-        "DisplayName": "<b><i>ПОЛЁТ</i></b>",
+        "DisplayName": "Полёт",
         "Default": true
       }
     ]
