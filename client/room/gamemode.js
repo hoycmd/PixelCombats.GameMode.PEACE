@@ -1,7 +1,7 @@
 import * as Room from 'pixel_combats/room';
 import * as Basic from 'pixel_combats/basic';
-import * as TeamMTR from './Teams_MTR.js;';
-import * as EditInvMTR from './EditInv_MTR.js';
+import * as TeamMTR from './Teams_TeamMTR.js;';
+import * as EditInvMTR from './Inventory_EditInvMTR.js';
 
 try {
 	
