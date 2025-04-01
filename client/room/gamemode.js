@@ -1,6 +1,7 @@
 import * as Room from 'pixel_combats/room';
 import * as Basic from 'pixel_combats/basic';
-import * as MTR from './Settings_MTR.js;';
+import * as TeamMTR from './Teams_MTR.js;';
+import * as EditInvMTR from './EditInv_MTR.js';
 
 try {
 	
@@ -8,13 +9,13 @@ const ImmortalityTimerName = 'Immortality';
 const MessageBlue = '<b><size=62><color=Green>M</a><color=Red>ᴛ</a><a>ʀ</a></size></b>';
 const MessageRed = '<b><size=82><color=Green>ᴮʸ:</a> <color=Red>ƬNƬ</a><color=Yellow>!</a></size></b>';
 
-const RedTeam = MTR.CreateRedTeam();
-const BlueTeam = MTR.CreateBlueTeam();
+const RedTeam = TeamMTR.CreateRedTeam();
+const BlueTeam = TeamMTR.CreateBlueTeam();
 BlueTeam.Build.BlocksSet.Value = Room.BuildBlocksSet.All;
 RedTeam.Build.BlocksSet.Value = Room.BuildBlocksSet.All;
 
-MTR.EditSettings();
-MTR.InventoryAll();
+.EditSettings();
+.InventoryAll();
 	
 Room.BreackGraph.WeakBlocks = Room.GameMode.Parameters.GetBool('LoosenBlocks');
 Room.BreackGraph.OnlyPlayerBlocksDmg = Room.GameMode.Parameters.GetBool('PartialDesruction');
