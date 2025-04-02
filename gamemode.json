@@ -2,7 +2,7 @@
   "Name": "<b><i><color=Lime>М</a><color=Red>Т</a><a>Р</a> (API 2.0)</i></b>",
   "Description": "<b><i>Мирный режим,но с оружиями <color=Red>(и бесконечными патронами на оружия)</a> и с функциями: <a>РЕДАКТОРА!!!</a></i></b>",
   "StartClientVersion": 532,
-  "ApiVersion": 1,
+  "ApiVersion": 3,
   "MapLists": [
     {
       "MapListId": 324,
