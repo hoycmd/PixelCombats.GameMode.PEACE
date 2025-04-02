@@ -1,7 +1,7 @@
-import * as Room from 'pixel_combats/room';
+import { Inventory, Build } from 'pixel_combats/room';
 
 function SetInventory() {
-  const inventory = Room.Inventory.GetContext();
+  const inventory = Inventory.GetContext();
    inventory.Main.Value = true; 
    inventory.MainInfinity.Value = true;
    inventory.Secondary.Value = true;
@@ -14,7 +14,7 @@ function SetInventory() {
 }
 
 function SetEditor() {
- const build = Room.Build.GetContext();
+ const build = Build.GetContext();
   build.Pipette.Value = true;
   build.FloodFill.Value = true;
   build.FillQuad.Value = true;
