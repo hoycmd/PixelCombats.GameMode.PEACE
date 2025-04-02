@@ -32,10 +32,3 @@ function SetEditor() {
   build.ChangeSpawnsEnable.Value = true;
   build.BuildRangeEnable.Value = true;
 }
-
-const Red = Room.GameMode.Parameters.GetBool('RedTeam');
-const Blue = Room.GameMode.Parameters.GetBool('BlueTeam');
-Room.BreackGraph.WeakBlocks = Room.GameMode.Parameters.GetBool('LoosenBlocks');
-Room.BreackGraph.OnlyPlayerBlocksDmg = Room.GameMode.Parameters.GetBool('PartialDesruction');
-Room.Damage.GetContext().FriendlyFire = Room.GameMode.Parameters.GetBool('FriendlyFire');
-Room.Build.GetContext().FlyEnable = Room.GameMode.Parameters.GetBool('Fly');
