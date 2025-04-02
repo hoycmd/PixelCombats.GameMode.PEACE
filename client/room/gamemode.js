@@ -13,6 +13,8 @@ const Blue = Room.GameMode.Parameters.GetBool('BlueTeam');
 if (Red || !Red && !Blue) = Room.Teams.CreateRedTeam();
 if (Blue || !Red && !Blue) = Room.Teams.CreateBlueTeam();
 Room.Build.GetContext().BlocksSet.Value = Room.BuildBlocksSet.All;
+Mtr.SetInventory();
+Mtr.SetEditor();
 
 Room.BreackGraph.WeakBlocks = Room.GameMode.Parameters.GetBool('LoosenBlocks');
 Room.BreackGraph.OnlyPlayerBlocksDmg = Room.GameMode.Parameters.GetBool('PartialDesruction');
