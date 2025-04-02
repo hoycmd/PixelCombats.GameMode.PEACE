@@ -1,8 +1,10 @@
 // Импорты:
-import { Build, Spawns, GameMode, Ui, Teams, BreackGraph, BuildBlocksSet, Damage } from 'pixel_combats/room';
+import { Build, Spawns, GameMode, Ui, Teams, BreackGraph, BuildBlocksSet, Damage, Players } from 'pixel_combats/room';
 import * as Teams from './default_teams.js';
 import * as Mtr from './mtr_library.js';
 
+try {
+ 
 // Настройки команд:
 const Red = GameMode.Parameters.GetBool('RedTeam'); 
 const Blue = GameMode.Parameters.GetBool('BlueTeam');
@@ -35,3 +37,7 @@ Ui.GetContext().Hint.Value = 'MTR - By: TnT!';
 
 // Моментальный спавн:
 Spawns.GetContext().RespawnTime.Value = 5;
+
+} catch (e) {
+	Players.All.forEach(msg => msg.Show(`(error.name) ${e.name}: (error.message) ${e.message}, (error.stack) ${e.stack};`));
+}
