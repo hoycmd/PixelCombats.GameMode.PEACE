@@ -1,24 +1,18 @@
 import * as Room from 'pixel_combats/room';
 import * as Basic from 'pixel_combats/basic';
-import * as Teams from './default_teams.js;';
+import * as Teams from './default_Teams.js';
+import * as Mtr from './Mtr_library.js';
 
 try {
 
 const MessageBlue = '<b><size=62><color=Green>M</a><color=Red>ᴛ</a><a>ʀ</a></size></b>';
 const MessageRed = '<b><size=82><color=Green>ᴮʸ:</a> <color=Red>ƬNƬ</a><color=Yellow>!</a></size></b>';
 
-const RedTeam = Room.Teams.CreateRedTeam();
-const BlueTeam = Room.Teams.CreateBlueTeam();
-BlueTeam.Build.BlocksSet.Value = Room.BuildBlocksSet.All;
-RedTeam.Build.BlocksSet.Value = Room.BuildBlocksSet.All;
+if (Red || !Red && !Blue) = Room.Teams.CreateRedTeam();
+if (Blue || !Red && !Blue) = Room.Teams.CreateBlueTeam();
 	
-Room.BreackGraph.WeakBlocks = Room.GameMode.Parameters.GetBool('LoosenBlocks');
-Room.BreackGraph.OnlyPlayerBlocksDmg = Room.GameMode.Parameters.GetBool('PartialDesruction');
-Room.Damage.GetContext().FriendlyFire = Room.GameMode.Parameters.GetBool('FriendlyFire');
-Room.Build.GetContext().FlyEnable = Room.GameMode.Parameters.GetBool('Fly');
 Room.Damage.GetContext().DamageOut.Value = true;
 Room.BreackGraph.PlayerBlockBoost = true;
-
 Room.Teams.OnRequestJoinTeam.Add(function(Player, Team) { Team.Add(Player); });
 Room.Teams.OnPlayerChangeTeam.Add(function(Player) { Player.Spawns.Spawn(); });
 
