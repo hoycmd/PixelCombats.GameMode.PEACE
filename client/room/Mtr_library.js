@@ -1,5 +1,7 @@
+// Импорт:
 import { Inventory, Build } from 'pixel_combats/room';
 
+// Функция, для конфигурации - инвентаря:
 function SetInventory() {
   const inventory = Inventory.GetContext();
    inventory.Main.Value = true; 
@@ -13,6 +15,7 @@ function SetInventory() {
    inventory.BuildInfinity.Value = true;
 }
 
+// Функция, редактора: 
 function SetEditor() {
  const build = Build.GetContext();
   build.Pipette.Value = true;
