@@ -1,8 +1,8 @@
 {
-  "ApiVersion": 2,
   "Name": "<b><i><color=Lime>М</a><color=Red>Т</a><a>Р</a> (API 2.0)</i></b>",
   "Description": "<b><i>Мирный режим,но с оружиями <color=Red>(и бесконечными патронами на оружия)</a> и с функциями: <a>РЕДАКТОРА!!!</a></i></b>",
   "StartClientVersion": 532,
+  "ApiVersion": 1,
   "MapLists": [
     {
       "MapListId": 324,
@@ -26,22 +26,6 @@
       {
         "Name": "WeakBlocks",
         "DisplayName": "Слабые блоки"
-      },
-      {
-        "Name": "RedTeam",
-        "DisplayName": "Команда: Красная",
-      },
-      {
-        "Name": "BlueTeam",
-        "DisplayName": "Команда: Синия",
-      },
-      {
-        "Name": "BlueHasNothing",
-        "DisplayName": "Пустой инвентарь, команды: Синие"
-      },
-      {
-        "Name": "RedHasNothing",
-        "DisplayName": "Пастой инвентарь, команды: Красные"
       },
       {
         "Name": "Fly",
