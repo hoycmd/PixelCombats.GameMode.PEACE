@@ -1,9 +1,9 @@
 // Импорт:
-import { Inventory, Build } from 'pixel_combats/room';
+import * as Room from 'pixel_combats/room';
 
 // Функция, для конфигурации - инвентаря:
 function SetInventory() {
-  const inventory = Inventory.GetContext();
+  const inventory = Room.Inventory.GetContext();
    inventory.Main.Value = true; 
    inventory.MainInfinity.Value = true;
    inventory.Secondary.Value = true;
@@ -17,7 +17,7 @@ function SetInventory() {
 
 // Функция, редактора: 
 function SetEditor() {
- const build = Build.GetContext();
+ const build = Room.Build.GetContext();
   build.Pipette.Value = true;
   build.FloodFill.Value = true;
   build.FillQuad.Value = true;
