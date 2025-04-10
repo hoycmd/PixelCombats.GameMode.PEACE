@@ -35,3 +35,26 @@ function SetEditor() {
   build.ChangeSpawnsEnable.Value = true;
   build.BuildRangeEnable.Value = true;
 }
+
+// Задаём, опции настроек - для функции режима:
+export function OptionsGameMode() {
+ const GameModeParameters = Room.GameMode.Parameters.GetBool;
+
+ // Параметры, при создании - комнаты:
+  const damage = Room.Damage.GetContext();
+  const build = Room.Build.GetContext();
+  Room.BreackGraph.WeakBlocks = GameModeParameters('LoosenBlocks');
+  Room.BreackGraph.OnlyPlayerBlocksDmg = GameModeParameters('PartialDesruction');
+  Room.damage.FriendlyFire = GameModeParameters('FriendlyFire');
+  build.FlyEnable = GameModeParameters('Fly');
+ // Базовые функции, включённые в комнате:
+  Room.damage.DamageOut.Value = true;
+  Room.BreackGraph.PlayerBlockBoost = true;
+}
+
+// Задаём, основу - режима mtr:
+export function MtrConfigure() {
+ Room.Ui.GetContext().Hint.Value = 'MTR - by: TnT!';
+ 
+
+  
