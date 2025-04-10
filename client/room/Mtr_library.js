@@ -43,6 +43,8 @@ export function OptionsGameMode() {
  // Параметры, при создании - комнаты:
   const damage = Room.Damage.GetContext();
   const build = Room.Build.GetContext();
+  const Red = GameModeParameters('RedTeam');
+  const Blue = GameModeParameters('BlueTeam');
   Room.BreackGraph.WeakBlocks = GameModeParameters('LoosenBlocks');
   Room.BreackGraph.OnlyPlayerBlocksDmg = GameModeParameters('PartialDesruction');
   Room.damage.FriendlyFire = GameModeParameters('FriendlyFire');
@@ -54,7 +56,30 @@ export function OptionsGameMode() {
 
 // Задаём, основу - режима mtr:
 export function MtrConfigure() {
- Room.Ui.GetContext().Hint.Value = 'MTR - by: TnT!';
- 
+ Room.Ui.GetContext().Hint.Value = 'MTR - by: TnT!'; // Подсказка, с верху в табе.
+ Room.Ui.GetContext().QuadsCount.Value = true; // Количество квадов, в комнате.
+ Room.BreackGraph.BreackAll = true; // Разрешаем сломать, любой блок.
+ Room.Spawns.GetContext().RespawnTime.Value = 5; // Таймер, после респавна.
+ Room.Properties.GetContext().GameModeName.Value = 'GameModes/Mtr'; // Название режима.
+  SetEditor(); // Функции редактора - в комнате.
+ SetInventory(); // Задаём, настройку - для инвентаря.
+ OptionsGameMode(); // Опция настроек, и разные - базовые функции.
+}
 
+// Задаём, команды - по запросу:
+export function CreateNewTeams() {
+ const GameModeParameters = Room.GameMode.Parameters.GetBool;
+ const InventoryNotTeamBlue = GameModeParameters('InventoryNotTeamBlue');
+ const InventoryNotTeamRed = GameModeParameters('InventoryNotTeamRed');
+
+// Создание команд - на основе, параметров о командах, и их - значении:
+ if (Red || (!Red && !Blue)) {
+  Team.CreateRedTeam();
+}
+ if (Blue || (!Red && !Blue)) {
+  Team.CreateBlueTeam();
+ }
   
+// Настройка, инвентарёв - команд при их - значении:
+Room.Teams.OnAddTeam.Add(function(Team) {
+ if (Team.Name === 
