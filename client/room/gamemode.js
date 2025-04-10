@@ -1,36 +1,34 @@
 // Импорты:
-import { Build, Spawns, GameMode, Ui, Teams, BreackGraph, BuildBlocksSet, Damage, Players } from 'pixel_combats/room';
-import * as teams from './default_teams.js';
-import * as mtr from './mtr_library.js';
-
-try {
+import * as Room from 'pixel_combats/room';
+import * as Team from './default_Team.js';
+import * as Mtr from './Mtr_library.js';
  
 // Настройки команд:
- const RedTeam = teams.CreateRedTeam(); 
- const BlueTeam = teams.CreateBlueTeam();
- RedTeam.Build.BlocksSet.Value = BuildBlocksSet.All;
- BlueTeam.Build.BlocksSet.Value = BuildBlocksSet.All;
+ const RedTeam = Team.CreateRedTeam(); 
+ const BlueTeam = Team.CreateBlueTeam();
+ RedTeam.Build.BlocksSet.Value = Room.BuildBlocksSet.All;
+ BlueTeam.Build.BlocksSet.Value = Room.BuildBlocksSet.All;
 // Задаём, настройку - для инвентаря:
-mtr.SetInventory();
+Mtr.SetInventory();
 
 // Параметры, при создании - комнаты:
-BreackGraph.WeakBlocks = GameMode.Parameters.GetBool('LoosenBlocks');
-BreackGraph.OnlyPlayerBlocksDmg = GameMode.Parameters.GetBool('PartialDesruction');
-Damage.GetContext().FriendlyFire = GameMode.Parameters.GetBool('FriendlyFire');	
+Room.BreackGraph.WeakBlocks = Room.GameMode.Parameters.GetBool('LoosenBlocks');
+Room.BreackGraph.OnlyPlayerBlocksDmg = Room.GameMode.Parameters.GetBool('PartialDesruction');
+Room.Damage.GetContext().FriendlyFire = Room.GameMode.Parameters.GetBool('FriendlyFire');	
 // Базовые функции, включённые в комнате:
-Damage.GetContext().DamageOut.Value = true;
-BreackGraph.PlayerBlockBoost = true;
+Room.Damage.GetContext().DamageOut.Value = true;
+Room.BreackGraph.PlayerBlockBoost = true;
 
 // Настройка редактора, в комнате:
-mtr.SetEditor();
+Mtr.SetEditor();
 
 // Вход в команду, по запросу:
-Teams.OnRequestJoinTeam.Add(function(Player, Team) { Team.Add(Player); });
+Room.Teams.OnRequestJoinTeam.Add(function(Player, Team) { Team.Add(Player); });
 // При входе, спавним игрока - в команде:
-Teams.OnPlayerChangeTeam.Add(function(Player) { Player.Spawns.Spawn(); });	
+Room.Teams.OnPlayerChangeTeam.Add(function(Player) { Player.Spawns.Spawn(); });	
 
 // Задаём, подсказку - в комнате:
-Ui.GetContext().Hint.Value = 'MTR - By: TnT!';
+Room.Ui.GetContext().Hint.Value = 'MTR - By: TnT!';
 
 // Моментальный спавн:
-Spawns.GetContext().RespawnTime.Value = 5;
+Room.Spawns.GetContext().RespawnTime.Value = 5;
