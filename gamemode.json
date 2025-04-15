@@ -20,6 +20,22 @@
         "DisplayName": "Урон по своим"
       },
       {
+        "Name": "BlueTeam",
+        "DisplayName": "Красная команда"
+      },
+      {
+        "Name": "RedTeam",
+        "DisplayName": "Синия команда"
+      },
+      {
+        "Name": "InventoryNotTeamBlue",
+        "DisplayName": "Пустой инвентарь, команды: Синие"
+      },
+      {
+        "Name": "InventoryNotTeamRed"
+        "DisplayName": "Пустой инвентарь, команды: Красные"
+      },
+      {
         "Name": "PartialDesruction",
         "DisplayName": "Частичное разрушение"
       },
