@@ -59,7 +59,11 @@ export function OptionsGameMode() {
 
 // Задаём, основу - режима mtr:
 export function MtrConfigure() {
+const ui = Room.Ui.GetContext();
+const build = Room.Build.GetContext();
+const properties = Room.Properties.GetContext();
  ui.Hint.Value = 'MTR - by: TnT!'; // Подсказка, с верху в табе.
+ build.BlocksSet.Value = Room.BuildBlocksSet.AllClear; // Задаём, все чистые - блоки.
  ui.QuadsCount.Value = true; // Количество квадов, в комнате.
  Room.BreackGraph.BreackAll = true; // Разрешаем сломать, любой блок.
  Room.Spawns.GetContext().RespawnTime.Value = 5; // Таймер, после респавна.
