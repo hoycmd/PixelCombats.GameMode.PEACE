@@ -1,5 +1,6 @@
-// Импорт:
+// Импорты:
 import * as Room from 'pixel_combats/room';
+import * as Team from './default_teams.js';
 
 // Функция, для конфигурации - инвентаря:
 function SetInventory() {
@@ -38,29 +39,31 @@ function SetEditor() {
 
 // Задаём, опции настроек - для функции режима:
 export function OptionsGameMode() {
- const GameModeParameters = Room.GameMode.Parameters.GetBool;
+ const GameModeParametersGetBool = Room.GameMode.Parameters.GetBool;
+ const damage = Room.Damage.GetContext();
+ const build = Room.Build.GetContext();
+ const properties = Room.Properties.GetContext();
+ const ui = Room.Ui.GetContext();
 
  // Параметры, при создании - комнаты:
-  const damage = Room.Damage.GetContext();
-  const build = Room.Build.GetContext();
-  const Red = GameModeParameters('RedTeam');
-  const Blue = GameModeParameters('BlueTeam');
-  Room.BreackGraph.WeakBlocks = GameModeParameters('LoosenBlocks');
-  Room.BreackGraph.OnlyPlayerBlocksDmg = GameModeParameters('PartialDesruction');
-  Room.damage.FriendlyFire = GameModeParameters('FriendlyFire');
-  build.FlyEnable = GameModeParameters('Fly');
+  const Red = GameModeParametersGetBool('RedTeam');
+  const Blue = GameModeParametersGetBool('BlueTeam');
+  Room.BreackGraph.WeakBlocks = GameModeParametersGetBool('LoosenBlocks');
+  Room.BreackGraph.OnlyPlayerBlocksDmg = GameModeParametersGetBool('PartialDesruction');
+  damage.FriendlyFire = GameModeParametersGetBool('FriendlyFire');
+  build.FlyEnable = GameModeParametersGetBool('Fly');
  // Базовые функции, включённые в комнате:
-  Room.damage.DamageOut.Value = true;
+  damage.DamageOut.Value = true;
   Room.BreackGraph.PlayerBlockBoost = true;
 }
 
 // Задаём, основу - режима mtr:
 export function MtrConfigure() {
- Room.Ui.GetContext().Hint.Value = 'MTR - by: TnT!'; // Подсказка, с верху в табе.
- Room.Ui.GetContext().QuadsCount.Value = true; // Количество квадов, в комнате.
+ ui.Hint.Value = 'MTR - by: TnT!'; // Подсказка, с верху в табе.
+ ui.QuadsCount.Value = true; // Количество квадов, в комнате.
  Room.BreackGraph.BreackAll = true; // Разрешаем сломать, любой блок.
  Room.Spawns.GetContext().RespawnTime.Value = 5; // Таймер, после респавна.
- Room.Properties.GetContext().GameModeName.Value = 'GameModes/Mtr'; // Название режима.
+ properties.GameModeName.Value = 'GameModes/Mtr'; // Название режима.
   SetEditor(); // Функции редактора - в комнате.
  SetInventory(); // Задаём, настройку - для инвентаря.
  OptionsGameMode(); // Опция настроек, и разные - базовые функции.
@@ -68,10 +71,8 @@ export function MtrConfigure() {
 
 // Задаём, команды - по запросу:
 export function CreateNewTeams() {
- const GameModeParameters = Room.GameMode.Parameters.GetBool;
- const InventoryNotTeamBlue = GameModeParameters('InventoryNotTeamBlue');
- const InventoryNotTeamRed = GameModeParameters('InventoryNotTeamRed');
-
+ const GameModeParametersGetBool = Room.GameMode.Parameters.GetBool;
+ 
 // Создание команд - на основе, параметров о командах, и их - значении:
  if (Red || (!Red && !Blue)) {
   Team.CreateRedTeam();
@@ -81,5 +82,19 @@ export function CreateNewTeams() {
  }
   
 // Настройка, инвентарёв - команд при их - значении:
-Room.Teams.OnAddTeam.Add(function(Team) {
- if (Team.Name === 
+ if (GameModeParametersGetBool('InventoryNotTeamBlue')) {
+   Room.Teams.Get('Blue').Inventory.Main.Value = false;
+   Room.Teams.Get('Blue').Inventory.Secondary.Value = false;
+   Room.Teams.Get('Blue').Inventory.Melee.Value = false;
+   Room.Teams.Get('Blue').Inventory.Explosive.Value = false;
+   Room.Teams.Get('Blue').Inventory.Build.Value = false;
+ }
+ if (GameModeParametersGetBool('InventoryNotTeamRed')) {
+   Room.Teams.Get('Red').Inventory.Main.Value = false;
+   Room.Teams.Get('Red').Inventory.Secondary.Value = false;
+   Room.Teams.Get('Red').Inventory.Melee.Value = false;
+   Room.Teams.Get('Red').Inventory.Explosive.Value = false;
+   Room.Teams.Get('Red').Inventory.Build.Value = false;
+ }
+  
+
