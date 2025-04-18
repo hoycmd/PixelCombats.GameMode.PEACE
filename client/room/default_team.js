@@ -16,11 +16,11 @@ export const RedTeam_COLOR = new Basic.Color(1, 0, 0, 0);
 // Функция, создания - синей команды:
 export function CreateBlueTeam() {
  Room.Teams.Add(BlueTeam_NAME, BlueTeam_DISPLAYNAME, BlueTeam_COLOR);
- Room.Spawns.SpawnPointsGroups.Add(BlueTeam_SPAWNPOINTSGROUP);
+ Room.Teams.Get('BlueTeam_NAME').SpawnPointsGroups.Add(BlueTeam_SPAWNPOINTSGROUP);
 }
 
 // Функция, создания - красной команды:
 export function CreateRedTeam() {
  Room.Teams.Add(RedTeam_NAME, RedTeam_DISPLAYNAME, RedTeam_COLOR);
- Room.Spawns.SpawnPointsGroups.Add(RedTeam_SPAWNPOINTSGROUP);
+ Room.Teams.Get('RedTeam_NAME').SpawnPointsGroups.Add(RedTeam_SPAWNPOINTSGROUP);
 }
