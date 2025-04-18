@@ -12,20 +12,12 @@
   "Parameters": {
     "Bool": [
       {
-        "Name": "Damage",
+        "Name": "DamageOut",
         "DisplayName": "Урон"
       },
       {
         "Name": "FriendlyFire",
         "DisplayName": "Урон по своим"
-      },
-      {
-        "Name": "BlueTeam",
-        "DisplayName": "Красная команда"
-      },
-      {
-        "Name": "RedTeam",
-        "DisplayName": "Синия команда"
       },
       {
         "Name": "InventoryNotTeamBlue",
@@ -40,8 +32,8 @@
         "DisplayName": "Частичное разрушение"
       },
       {
-        "Name": "WeakBlocks",
-        "DisplayName": "Слабые блоки"
+        "Name": "AllSetBlocks",
+        "DisplayName": "Все чистые блоки"
       },
       {
         "Name": "Fly",
