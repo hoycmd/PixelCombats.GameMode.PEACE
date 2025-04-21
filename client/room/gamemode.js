@@ -1,10 +1,10 @@
 import * as room from 'pixel_combats/room';
 import * as basic from 'pixel_combats/basic';
-import * as team from './default_team.js';
-import * as mtr from './library_mtr.js';
 
-const blueTeam = team.create_blue_team();
-const redTeam = team.create_red_team();
+room.Teams.Add('blue', 'blue', new basic.Color(0, 0, 0, 0));
+room.Teams.Add('red', 'red', new basic.Color(0, 0, 0, 0));
+const blueTeam = room.Teams.Get('blue');
+const redTeam = room.Teams.Get('red');
 
 room.Build.GetContext().FlyEnable = room.GameMode.Parameters.GetBool('Fly');
 room.BreackGraph.OnlyPlayerBlocksDmg = room.GameMode.Parameters.GetBool('PartialDesruction');
@@ -33,6 +33,3 @@ room.Teams.OnPlayerChangeTeam.Add(function(p){
            }
      }
 }
-
-mtr.set_inventory();
-mtr.set_editor();
